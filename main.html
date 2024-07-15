@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+        }
+        h1 {
+            margin: 20px 0;
+            color: #333;
+        }
+        button {
+            background: transparent;
+            border: 2px solid #fff;
+            padding: 15px 30px;
+            margin: 15px 0;
+            border-radius: 30px;
+            font-size: 20px;
+            color: #fff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        button:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            background: rgba(255, 255, 255, 0.15);
+            transition: all 0.3s ease;
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+        button:hover:before {
+            width: 0;
+            height: 0;
+        }
+        button:hover {
+            background: #fff;
+            color: #2575fc;
+            border-color: #2575fc;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nick">
+            <button>
+                <a href="login.html">
+                    <h1>Login</h1>
+                </a>
+            </button>
+        </div>
+        <div class="good">
+            <button>
+                <a href="registration.html">
+                    <h1>Register</h1>
+                </a>
+            </button>
+        </div>
+        <div class="bad">
+            <button>
+                <a href="application.html">
+                    <h1>Application</h1>
+                </a>
+            </button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .back-button {
+            background-color: #f44336;
+        }
+        .back-button:hover {
+            background-color: #d32f2f;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Application Form</h1>
+    <form action="submit_application.php" method="post">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" required>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="nationality">Nationality:</label>
+            <input type="text" id="nationality" name="nationality" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Educational Background</legend>
+            <label for="school">Schools/Colleges Attended:</label>
+            <textarea id="school" name="school" rows="3" required></textarea>
+
+            <label for="degree">Degrees Obtained:</label>
+            <input type="text" id="degree" name="degree" required>
+
+            <label for="gradDate">Graduation Dates:</label>
+            <input type="text" id="gradDate" name="gradDate" required>
+
+            <label for="major">Major/Field of Study:</label>
+            <input type="text" id="major" name="major" required>
+
+            <label for="achievements">Academic Achievements or Awards:</label>
+            <textarea id="achievements" name="achievements" rows="3"></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Work Experience</legend>
+            <label for="employer">Previous Employers:</label>
+            <textarea id="employer" name="employer" rows="3" required></textarea>
+
+            <label for="jobTitle">Job Titles:</label>
+            <input type="text" id="jobTitle" name="jobTitle" required>
+
+            <label for="employmentDates">Dates of Employment:</label>
+            <input type="text" id="employmentDates" name="employmentDates" required>
+
+            <label for="responsibilities">Key Responsibilities and Achievements:</label>
+            <textarea id="responsibilities" name="responsibilities" rows="3" required></textarea>
+
+            <label for="references">References:</label>
+            <textarea id="references" name="references" rows="3" required></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Skills and Qualifications</legend>
+            <label for="skills">Relevant Skills:</label>
+            <textarea id="skills" name="skills" rows="3" required></textarea>
+
+            <label for="certifications">Certifications or Licenses:</label>
+            <textarea id="certifications" name="certifications" rows="3"></textarea>
+
+            <label for="languages">Languages Spoken:</label>
+            <textarea id="languages" name="languages" rows="3"></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Personal Statement</legend>
+            <label for="statement">Personal Statement or Cover Letter:</label>
+            <textarea id="statement" name="statement" rows="5" required></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Additional Information</legend>
+            <label for="availability">Availability:</label>
+            <input type="text" id="availability" name="availability">
+
+            <label for="relocate">Willingness to Relocate:</label>
+            <input type="text" id="relocate" name="relocate">
+
+            <label for="salary">Salary Expectations:</label>
+            <input type="text" id="salary" name="salary">
+        </fieldset>
+
+        <fieldset>
+            <legend>Legal Disclosures and Consents</legend>
+            <label>
+                <input type="checkbox" name="terms" required> I agree to the Terms and Conditions
+            </label>
+            <label>
+                <input type="checkbox" name="privacy" required> I agree to the Data Privacy Statement
+            </label>
+        </fieldset>
+
+        <button type="submit">Submit Application</button>
+    </form>
+    <button class="back-button" onclick="window.location.href='main_page_url.html'">Back to Main Page</button>
+</div>
+
+</body>
+</html>
